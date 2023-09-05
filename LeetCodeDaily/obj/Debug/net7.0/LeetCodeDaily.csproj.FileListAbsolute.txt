@@ -1,0 +1,15 @@
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/bin/Debug/net7.0/LeetCodeDaily
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/bin/Debug/net7.0/LeetCodeDaily.deps.json
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/bin/Debug/net7.0/LeetCodeDaily.runtimeconfig.json
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/bin/Debug/net7.0/LeetCodeDaily.dll
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/bin/Debug/net7.0/LeetCodeDaily.pdb
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.csproj.AssemblyReference.cache
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.AssemblyInfoInputs.cache
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.AssemblyInfo.cs
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.csproj.CoreCompileInputs.cache
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.dll
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/refint/LeetCodeDaily.dll
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.pdb
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/LeetCodeDaily.genruntimeconfig.cache
+/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/obj/Debug/net7.0/ref/LeetCodeDaily.dll
