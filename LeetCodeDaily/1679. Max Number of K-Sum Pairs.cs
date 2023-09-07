@@ -28,16 +28,12 @@ public class Solution {
         Dictionary<int, int> dic = new Dictionary<int,int >();
         for(int i = 0 ; i < nums.Length; i++)
         {
-            if(nums[i] == 0) continue;
-            for(int j = i + 1; j < nums.Length; j++)
+            if(dic.ContainsKey(k - nums[i]) && dic[k- nums[i]] > 0)
             {
-                if(nums[j] == 0) continue;
-                if(nums[i] + nums[j] ==k)
-                {
-                    nums[i] = nums[j] = 0;
-                    count++;
-                    break;
-                }
+                dic[k- nums[i]] = dic[k- nums[i]] - 1;
+                count++;
+            } else {
+                dic[nums[i]] = dic.ContainsKey(nums[i]) ? dic[nums[i]]+ 1 : 1;
             }
         }
 
