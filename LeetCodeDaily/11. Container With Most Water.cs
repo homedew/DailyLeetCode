@@ -22,24 +22,20 @@
 // 1st attemp using Brute force
 public class Solution {
     public int MaxArea(int[] height) {
-        int currentAreaMax =  -1;
-        int area = 0;
-        for(int i =0; i < height.Length; i ++)
-        {
-            for(int j = i + 1; j < height.Length; j++ )
-            {
-                int containWater = Math.Min(height[i], height[j]);
-                int currentArea = containWater * ( j - i);
+        int areaMax =  -1;
+        int left = 0, right = height.Length - 1;
 
-                if(currentAreaMax < currentArea)
-                {
-                    currentAreaMax = currentArea;
-                }
+        while( left < height.Length){
+            areaMax = Math.Max(areaMax, Math.Min(height[left], height[right]) * (right - left));
+            if(height[left]<=  height[right])
+            {
+                left++;
+            } else {
+                right--;
             }
         }
 
-        return currentAreaMax;
+        return areaMax;
     }
 }
- 
 
