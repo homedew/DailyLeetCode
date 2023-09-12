@@ -16,32 +16,23 @@
 
 public class Solution {
     public double FindMaxAverage(int[] nums, int k) {
-        int max = Int32.MinValue;
-        if(nums.Length == 1) 
+        double result;
+        double currentSum = 0;
+
+        for(int i = 0;i < k; i ++)
         {
-            double res  = nums[0] / k;
-             Math.Round(res, 2);
-            return res;
+            currentSum+= nums[i];
         }
-        for(int i = 0; i < nums.Length; i ++)
+
+        result = currentSum / k;
+
+        for(int i = k; i< nums.Length; i++)
         {
-            int sum = nums[i];
-            if( i + (k -1 ) >= nums.Length)
-            {
-                break;
-            }
-            for(int j = i + 1; j< i + k; j++)
-            {
-               
-                sum+=nums[j];
-
-            }
-
-               max = Math.Max(max, sum); 
-
+            currentSum+= nums[i] - nums[i - k];
+            
+            result = Math.Max(currentSum /k, result);
         }
-        double result = (double)max / k;
-        Math.Round(result, 2);
+
         return result;
     }
 }
