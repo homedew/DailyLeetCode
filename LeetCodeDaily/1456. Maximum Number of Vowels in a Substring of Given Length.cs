@@ -19,37 +19,28 @@
 // Input: s = "leetcode", k = 3
 // Output: 2
 // Explanation: "lee", "eet" and "ode" contain 2 vowels.
-
 public class Solution {
     public int MaxVowels(string s, int k) {
-        string vowels = "aeiou";
-        int res =0;
-        int count =0;
-        int i =0;
-        int j = 0;
-        while(i + k  <= s.Length)
-        {
-            j = i;
-            while( i  <j  + k )
-            {
-                if(vowels.Contains(s[i]))
-                {
-                    count += 1;
-                    i++;
-                    if(i > s.Length)
-                    {
-                        break;
-                    }
-                } else {
-                    i++;
-                }
+        HashSet<char> vowels = new HashSet<char>(){'a', 'e', 'i', 'o', 'u'};
+        int count = 0;
 
-            }
-            res = Math.Max(res, count);
-            count = 0;
-            i = j + 1;
+        //init window
+        for(int i = 0; i< k; i++)
+        {
+            count+= vowels.Contains(s[i]) ? 1: 0;
+        }
+        if(count == k) return count;
+        
+        int result = count;
+        // slide the window
+        for(int i = k ;i < s.Length;i ++)
+        {
+            count+= vowels.Contains(s[i]) ?  1: 0;
+            count-= vowels.Contains(s[i - k]) ? 1: 0;
+            result = Math.Max(result, count);
+
         }
 
-        return res;
+        return result;
     }
 }
