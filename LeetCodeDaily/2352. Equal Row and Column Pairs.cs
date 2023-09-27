@@ -20,34 +20,38 @@
 // - (Row 0, Column 0): [3,1,2,2]
 // - (Row 2, Column 2): [2,4,2,2]
 // - (Row 3, Column 2): [2,4,2,2]
-
 public class Solution {
     public int EqualPairs(int[][] grid) {
+        Dictionary<string, int> rowDic = new Dictionary<string, int>();
         int match = 0;
-        bool isMatch = true;
-        for(int r = 0; r < grid.Length; r++)
+        foreach(int[] g in grid)
         {
-            for(int c = 0; c < grid.Length; c++)
+            string rowString = String.Join(",", g);
+
+            if(rowDic.ContainsKey(rowString))
             {
-                isMatch = true;
-                for(int i = 0; i< grid.Length; i++)
-                {
-                    if(grid[r][i] != grid[i][c])
-                    {
-                        isMatch = false;
-                        break;
-                    }
-
-                }
-
-                match += isMatch ? 1 : 0;
+                rowDic[rowString]++ ;
+            } else {
+                rowDic[rowString] = 1;;
             }
+        }
+
+        for(int c = 0 ; c< grid.Length ; c++)
+        {
+            int[] array = new int[grid.Length];
+            for(int r = 0; r < grid.Length; r++)
+            {
+                array[r] = grid[r][c];
+                
+            }
+            string currentCol = String.Join(",", array);
+
+            match += rowDic.ContainsKey(currentCol) ? rowDic[currentCol] : 0;
         }
 
         return match;
     }
 }
-
 /*
     3 1 2 2
 
