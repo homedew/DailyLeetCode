@@ -44,3 +44,29 @@ public class Solution {
         return String.Join("", store.ToArray().Reverse());
     }
 }
+
+
+// Using 2 pointers
+public class Solution {
+    public string RemoveStars(string s) {
+       char[] ch = new char[s.Length];
+       int j = 0;
+       for(int i = 0; i < s.Length; i++)
+       {
+           if(s[i] == '*')
+           {
+               j--;
+           } else {
+               ch[j++] = s[i];
+           }
+       }
+        
+       StringBuilder sb = new StringBuilder(); 
+       for(int i = 0; i< j; i++)
+       {
+           sb.Append(ch[i]);
+       }
+
+       return sb.ToString();
+    }
+}
