@@ -72,3 +72,50 @@ public class Solution {
 
 
 
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int val=0, ListNode next=null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
+public class Solution {
+    public int PairSum(ListNode head) {
+        // find middle of the linkedlist
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while(fast != null && fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        // reverse from the middle
+
+        ListNode tempNextNode, pre = null;
+        while(slow != null)
+        {
+            tempNextNode= slow.next;
+            slow.next = pre;
+            pre = slow;
+            slow = tempNextNode;
+        }
+
+        // then find max from origin and reverse
+        ListNode start = head;
+        int max = 0;
+        while(pre != null)
+        {
+            max = Math.Max(max, start.val + pre.val);
+            pre = pre.next;
+            start = start.next;
+        }
+
+        return max;
+
+    }
+}
