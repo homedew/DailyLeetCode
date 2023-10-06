@@ -33,3 +33,42 @@ public class Solution {
 
     }
 }
+
+// using stack
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int val=0, ListNode next=null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
+public class Solution {
+    public int PairSum(ListNode head) {
+        Stack<int> stackVal = new Stack<int>();
+        ListNode current = head;
+        while(head !=null)
+        {
+            stackVal.Push(head.val);
+            head = head.next;
+        }
+
+        int i  = 0, j = stackVal.Count;
+        int max = 0;
+        while(i < j / 2)
+        {
+            max = Math.Max(max, current.val + stackVal.Pop());
+            current = current.next;
+            i++;
+        }
+
+        return max;
+
+    }
+}
+
+
+
