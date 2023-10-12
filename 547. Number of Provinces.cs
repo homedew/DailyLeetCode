@@ -30,3 +30,44 @@ public class Solution {
         }
    }
 }
+// update solution using bFS
+
+public class Solution
+{
+    public void Bfs(int node,  int[][] isConnected, bool[] visisted)
+    {   
+        Queue<int> queue  =new Queue<int>();
+        queue.Enqueue(node);
+        visisted[node] = true;
+
+        while(queue.Any())
+        {
+            node = queue.Dequeue();
+            for(int i = 0; i < isConnected.Length; i++)
+            {
+                if(isConnected[node][i] == 1 && !visisted[i])
+                {
+                    queue.Enqueue(i);
+                    visisted[i];
+                }
+            }
+        }
+
+
+    }
+     public int FindCircleNum(int[][] isConnected) {
+        int length = isConnected.Length;
+        int count = 0;
+        bool[] visisted = new bool[length];
+        for(int i = 0 ; i< length; i++)
+        {
+            if(!visisted[i])
+            {
+                count++;
+                Bfs(i, isConnected, visisted);
+            }
+        }
+
+     }
+
+}
