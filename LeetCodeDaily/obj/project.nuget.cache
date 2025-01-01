@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "F+F2isd0Yb+ZnGkKXq3nVIUV5OzAU68UIyCJ1Ihuf5tAtdWuWuV/0OX8clcHbMkDMXtoaooAdFS5CSlfHyQWMw==",
+  "dgSpecHash": "TqJ80E0Ef6E=",
   "success": true,
-  "projectFilePath": "/Volumes/homedew/SuperWeird/DailyLeetCode/LeetCodeDaily/LeetCodeDaily.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Volumes/CrewDev/Coding/DailyLeetCode/LeetCodeDaily/LeetCodeDaily.csproj",
+  "expectedPackageFiles": [
+    "/Users/homedew/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/homedew/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/homedew/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.20/microsoft.netcore.app.host.osx-arm64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
